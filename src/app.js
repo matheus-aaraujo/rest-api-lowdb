@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const routes = require("./routes/routes");
-app.use("/", routes);
+app.use("/memes", routes);
 
 
 module.exports = app;

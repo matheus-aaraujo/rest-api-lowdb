@@ -3,5 +3,6 @@ const router = express.Router();
 const agendamentosController = require("../controllers/agendamento-controller");
 
 router.get("/agendamentos", agendamentosController.getAgendamentosController);
+router.post("/agendamentos/criarAgendamento", agendamentosController.createAgendamentoController);
 
 module.exports = router;
