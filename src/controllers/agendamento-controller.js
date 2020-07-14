@@ -26,3 +26,12 @@ exports.createAgendamentoController = async (req, res) => {
         res.status(500).send({message: 'Deu ruim ae.'});
     }
 }
+
+exports.findAgendamentoPorDataController = async (req, res) => {
+    try {
+        const data = db.get("agendamentos").find(req.params.data).value();
+        res.status(200).send(data);
+    } catch (error) {
+        res.status(500).send({message: error});
+    }
+}
